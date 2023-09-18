@@ -1,0 +1,60 @@
+{
+    "profesionales": [
+      {
+        "nombre": "Norberto Musri",
+        "especialidad": "Urólogo",
+        "imagen": "imagen1.jpg",
+        "detalle": "Información detallada del profesional 1",
+        "Contacto": "011-5555-4848"
+      },
+      {
+        "nombre": "Alan Leuis",
+        "especialidad": "Bebe mucho de la bebida",
+        "imagen": "imagen2.jpg",
+        "detalle": "Información detallada del profesional 2",
+        "Contacto": "011-5425-2828"
+      },
+      {
+        "nombre": "producto1",
+        "especialidad": "Descripción del profesional 1",
+        "imagen": "imagen1.jpg",
+        "detalle": "Información detallada del profesional 1",
+        "Contacto": 4.8
+      },
+      {
+        "nombre": "producto2",
+        "especialidad": "Descripción del profesional 2",
+        "imagen": "imagen2.jpg",
+        "detalle": "Información detallada del profesional 2",
+        "Contacto": 4.5
+      },
+      {
+        "nombre": "producto1",
+        "especialidad": "Descripción del profesional 1",
+        "imagen": "imagen1.jpg",
+        "detalle": "Información detallada del profesional 1",
+        "Contacto": 4.8
+      },
+      {
+        "nombre": "producto2",
+        "especialidad": "Descripción del profesional 2",
+        "imagen": "imagen2.jpg",
+        "detalle": "Información detallada del profesional 2",
+        "Contacto": 4.5
+      },
+      {
+        "nombre": "producto1",
+        "especialidad": "Descripción del profesional 1",
+        "imagen": "imagen1.jpg",
+        "detalle": "Información detallada del profesional 1",
+        "Contacto": 4.8
+      },
+      {
+        "nombre": "producto2",
+        "especialidad": "Descripción del profesional 2",
+        "imagen": "imagen2.jpg",
+        "detalle": "Información detallada del profesional 2",
+        "Contacto": 4.5
+      }
+    ]
+  }
