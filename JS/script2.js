@@ -1,69 +1,49 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const volverButton = document.getElementById('volverButton');
+document.addEventListener("DOMContentLoaded", () => {
 
-    if (volverButton) {
-      volverButton.addEventListener('click', () => {
-        window.location.href = 'index.html';
-      });
-    }
+  const detalleProfesional = document.getElementById("detalle-container");
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const cardId = urlParams.get('cardid');
+  const urlParams = new URLSearchParams(window.location.search);
+  const idProfesional = urlParams.get("id");
 
-    if (!cardId) {
-      console.error('No se proporcionó un ID de tarjeta.');
-      return;
-    }
+  const datosProfesionales = JSON.parse(localStorage.getItem("profesionales"));
 
-    fetch('/JSON/profesionales.json')
-      .then(response => response.json())
-      .then(data => {
-        const profesional = data.profesionales.find(prof => prof.nombre === cardId);
+  const profesionalSeleccionado = datosProfesionales.profesionales.find(
+    (profesional) => profesional.id == idProfesional
+  );
 
-        if (profesional) {
-          almacenarEnLocalStorage('profesionalSeleccionado', profesional);
-          cargarDatosEnPagina(profesional);
-        } else {
-          console.error('No se encontró el profesional con el ID proporcionado.');
-        }
-      })
-      .catch(error => {
-        console.error('Error al cargar los datos desde el JSON:', error);
-      });
+  if (profesionalSeleccionado) {
+    const contenedorProfesional = document.createElement("div");
+    contenedorProfesional.classList.add("contenedor-profesional");
+    contenedorProfesional.innerHTML = `<div class="card">
+    <div class="row g-0">
+      <div class="col-5 col-sm-4">
+        <img src="${profesionalSeleccionado.imagen}" class="img-fluid w-100" alt="Primer plano de ${profesionalSeleccionado.nombre}">
+      </div>
+      <div class="col-4 col-sm-8">
+        <div class="card-body">
+          <h4 class="card-title">${profesionalSeleccionado.nombre}</h4>
+          <h6 class="card-subtitle mb-2">${profesionalSeleccionado.especialidad}</h6>
+          <p class="card-text">${profesionalSeleccionado.detalle.replace(/\n/g, "<br/>")}</p>
+          <p class="card-text"><small>Contacto: ${profesionalSeleccionado.Contacto}</small></p>
+          <button id="volver" class="btn btn-primary">Volver a la lista</button>
+        </div>
+      </div>
+    </div>
+  </div>`
+    
+  contenedorProfesional.querySelector("button").addEventListener("click", () => {
+    window.location.href = "index.html";
   });
-
-function almacenarEnLocalStorage(valor, data) {
-    localStorage.setItem(valor, JSON.stringify(data));
-}
-
-function cargarDatosEnPagina(datos) {
-    const container = document.getElementById('detalle-container');
-    if (!container) {
-      console.error('No se pudo encontrar el contenedor de detalles.');
-      return;
-    }
-  
-    container.innerHTML = '';
-  
-    const nombre = document.createElement('h2');
-    nombre.textContent = datos.nombre;
-  
-    const especialidad = document.createElement('p');
-    especialidad.textContent = 'Descripción: ' + datos.especialidad;
-  
-    const imagen = document.createElement('img');
-    imagen.src = datos.imagen;
-    imagen.alt = 'Imagen del Profesional';
-  
-    const detalle = document.createElement('p');
-    detalle.textContent = 'Detalle: ' + datos.detalle;
-  
-    const Contacto = document.createElement('p');
-    Contacto.textContent = 'Contacto: ' + datos.Contacto;
-  
-    container.appendChild(nombre);
-    container.appendChild(especialidad);
-    container.appendChild(imagen);
-    container.appendChild(detalle);
-    container.appendChild(Contacto);
-}
+    
+    // `
+    // <div>
+    // <h2>${profesionalSeleccionado.nombre}</h2>
+    // <img src="${profesionalSeleccionado.imagen}" alt="Texto alternativo">
+    // </div>
+    //   <p>Especialidad: ${profesionalSeleccionado.especialidad}</p>
+    //   <p>Detalle: ${profesionalSeleccionado.detalle}</p>
+    //   <p>Contacto: ${profesionalSeleccionado.Contacto}</p>
+    //   `;
+    detalleProfesional.appendChild(contenedorProfesional);
+  }
+});

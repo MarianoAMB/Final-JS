@@ -1,37 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const cardContainer = document.getElementById('card-container');
+fetch('./JSON/profesionales.json')
+  .then(respuesta => respuesta.json())
+  .then(datos => localStorage.setItem('profesionales', JSON.stringify(datos)))
 
-  if (cardContainer) {
-    fetch('/JSON/profesionales.json')
-      .then(response => response.json())
-      .then(data => {
-        const profesionalesData = data.profesionales;
+  document.addEventListener('DOMContentLoaded', () => {
+    const cardContainer = document.getElementById('card-container');
+    const datosProfesionales = JSON.parse(localStorage.getItem('profesionales'));
 
-        profesionalesData.forEach(profesional => {
-          const card = document.createElement('div');
-          card.classList.add('col-md-12', 'card');
-          card.id = profesional.nombre;
+    if (datosProfesionales){
+      datosProfesionales.profesionales.forEach(profesional => {
+        const card = document.createElement('div');
+        card.classList.add('col-md-12', 'card');	
+        card.innerHTML = `<h2>${profesional.nombre}</h2>
+            <div class="d-flex">
+            <span>${profesional.especialidad}</span>
+            <button class="btn btn-success"}">Más info</button>
+            </div>`;
 
-          const cardContent = `
-            <div class="d-flex justify-content-between">
-              <span>${profesional.nombre}</span>
-              <button class="btn btn-success" cardid="${profesional.nombre}">+</button>
-            </div>
-          `;
+        const boton = card.querySelector('.btn-success');
+        boton.addEventListener("click",() => {
+          detallesProfesional(profesional);
+        })
 
-          card.innerHTML = cardContent;
-          cardContainer.appendChild(card);
+        cardContainer.appendChild(card);
+      })}
+  })
 
-          card.querySelector('button').addEventListener('click', (event) => {
-            const cardId = event.target.getAttribute('cardid');
-            window.location.href = `datos.html?cardid=${cardId}`;
-          });
-        });
-      })
-      .catch(error => {
-        console.error('Error al cargar los datos desde el JSON:', error);
-      });
-  } else {
-    console.error('No se encontró el contenedor de tarjetas.');
+  function detallesProfesional(profesional) {
+    window.location.href = `datos.html?id=${profesional.id}`;
   }
-});

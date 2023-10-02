@@ -1,60 +1,68 @@
 {
     "profesionales": [
       {
+        "id": 1,
         "nombre": "Norberto Musri",
         "especialidad": "Urólogo",
-        "imagen": "imagen1.jpg",
-        "detalle": "Información detallada del profesional 1",
+        "imagen": "../img/1.jpg",
+        "detalle": "Más de 15 años de experiencia en el tratamiento de enfermedades del aparato urinario y reproductor en hombres y mujeres. Es un profesional altamente capacitado y comprometido con el bienestar de sus pacientes.\n El Dr. Pérez es un miembro activo de la Asociación Argentina de Urología y ha publicado varios artículos en revistas médicas de renombre. \n Se especializa en cálculos renales,infección del tracto urinario (ITU), prostatitis, cáncer de próstata, cáncer de riñón, incontinencia urinaria, y eyaculación precoz.",
         "Contacto": "011-5555-4848"
       },
       {
+        "id": 2,
         "nombre": "Alan Leuis",
-        "especialidad": "Bebe mucho de la bebida",
-        "imagen": "imagen2.jpg",
-        "detalle": "Información detallada del profesional 2",
+        "especialidad": "Homeópata",
+        "imagen": "../img/2.jpg",
+        "detalle": "El Dr. Alan Leuis es un homeópata con más de 10 años de experiencia en el tratamiento de una amplia gama de afecciones, desde problemas de salud comunes hasta enfermedades crónicas. Es un profesional altamente capacitado y comprometido con el bienestar de sus pacientes. \n En su práctica, el Dr. Leuis se enfoca en proporcionar un tratamiento personalizado y compasivo a cada paciente. Se toma el tiempo para escuchar las preocupaciones de sus pacientes y desarrollar un plan de tratamiento que se ajuste a sus necesidades individuales.",
         "Contacto": "011-5425-2828"
       },
       {
-        "nombre": "producto1",
-        "especialidad": "Descripción del profesional 1",
-        "imagen": "imagen1.jpg",
-        "detalle": "Información detallada del profesional 1",
-        "Contacto": 4.8
+        "id": 3,
+        "nombre": "Emanuel Perez",
+        "especialidad": "Nutricionista",
+        "imagen": "../img/3.jpg",
+        "detalle": "Emanuel Pérez es un nutricionista con más de 25 años de experiencia en el asesoramiento nutricional a personas de todas las edades y condiciones. Es un profesional altamente capacitado y comprometido con ayudar a sus pacientes a alcanzar sus objetivos de salud. \n Se especializa en el tratamiento de obesidad, diabetes, hipertensión, y colesterol alto.",
+        "Contacto": "011-4325-6580"
       },
       {
-        "nombre": "producto2",
-        "especialidad": "Descripción del profesional 2",
-        "imagen": "imagen2.jpg",
-        "detalle": "Información detallada del profesional 2",
-        "Contacto": 4.5
+        "id": 4,
+        "nombre": "Soraya Abdul",
+        "especialidad": "Ginecóloga",
+        "imagen": "../img/4.jpg",
+        "detalle": "La Dra. Soraya Abdul es una ginecóloga ficticia de renombre reconocida por su enfoque empático y profesional hacia la salud femenina. Con una vasta experiencia y una reputación sólida, la Dra. Abdul se destaca por su dedicación en entender las necesidades únicas de cada paciente. Su filosofía se basa en la comunicación abierta y en brindar un ambiente seguro donde cada mujer se siente escuchada y comprendida. \n Si buscas una ginecóloga comprensiva y dedicada, la Dra. Soraya Abdul es la elección ideal para tu bienestar femenino.",
+        "Contacto": "011-4532-1897"
       },
       {
-        "nombre": "producto1",
-        "especialidad": "Descripción del profesional 1",
-        "imagen": "imagen1.jpg",
-        "detalle": "Información detallada del profesional 1",
-        "Contacto": 4.8
+        "id": 5,
+        "nombre": "Blanca Vazquez",
+        "especialidad": "Kinesióloga",
+        "imagen": "../img/5.jpg",
+        "detalle": "Es una experta en terapias de rehabilitación y bienestar físico. Especializada en diseñar programas de ejercicios personalizados y aplicar técnicas de terapia manual, adapta cada tratamiento según las necesidades únicas de cada paciente, garantizando una recuperación efectiva y duradera. \n Su enfoque apasionado se centra en no solo aliviar el dolor, sino también en educar a los pacientes sobre sus cuerpos y su salud. Con un profundo conocimiento y un trato empático, se convierte en una opción confiable para aquellos que buscan mejorar su calidad de vida a través de la kinesiología.",
+        "Contacto": "011-4165-9321"
       },
       {
-        "nombre": "producto2",
-        "especialidad": "Descripción del profesional 2",
-        "imagen": "imagen2.jpg",
-        "detalle": "Información detallada del profesional 2",
-        "Contacto": 4.5
+        "id": 6,
+        "nombre": "Regina Lopez",
+        "especialidad": "Traumatóloga",
+        "imagen": "../img/6.jpg",
+        "detalle": "Experta en el tratamiento de lesiones musculoesqueléticas y trastornos óseos. Con una amplia trayectoria en el campo de la traumatología, se especializa en diagnósticos precisos y tratamientos efectivos para ayudar a sus pacientes a recuperarse y mejorar su calidad de vida. Su enfoque compasivo y profesional garantiza un manejo integral de cada caso, adaptándose a las necesidades únicas de cada individuo. \n Además de su pericia médica, busca educar a sus pacientes sobre sus condiciones y opciones de tratamiento, fomentando la participación activa en su proceso de recuperación. Con un compromiso constante con el bienestar y la salud de sus pacientes, la traumatóloga se ha convertido en una figura respetada y confiable en el campo de la traumatología.",
+        "Contacto": "011-4213-7401"
       },
       {
-        "nombre": "producto1",
-        "especialidad": "Descripción del profesional 1",
-        "imagen": "imagen1.jpg",
-        "detalle": "Información detallada del profesional 1",
-        "Contacto": 4.8
+        "id": 7,
+        "nombre": "Aldo Mendez",
+        "especialidad": "Cirujano general",
+        "imagen": "../img/7.jpg",
+        "detalle": "Profesional altamente calificado en el campo de la cirugía. Con una sólida formación académica y años de experiencia, se ha especializado en una amplia gama de intervenciones quirúrgicas. Su enfoque se centra en brindar atención quirúrgica de vanguardia, aplicando las últimas técnicas y tecnologías para asegurar resultados óptimos para cada paciente. \n Su compromiso con la excelencia y la seguridad del paciente es evidente en cada procedimiento que realiza. Busca establecer una relación de confianza con sus pacientes, proporcionando información detallada y orientación antes y después de la cirugía. Este cirujano general es reconocido por su dedicación a la mejora constante y su habilidad para abordar una amplia variedad de condiciones médicas, convirtiéndolo en un recurso invaluable para aquellos en busca de cuidado quirúrgico especializado.",
+        "Contacto": "011-4780-3019"
       },
       {
-        "nombre": "producto2",
-        "especialidad": "Descripción del profesional 2",
-        "imagen": "imagen2.jpg",
-        "detalle": "Información detallada del profesional 2",
-        "Contacto": 4.5
+        "id": 8,
+        "nombre": "Esteban Rodriguez",
+        "especialidad": "Neumonólogo",
+        "imagen": "../img/8.jpg",
+        "detalle": "Especialista altamente capacitado en enfermedades respiratorias y trastornos pulmonares. Con años de experiencia en el campo de la neumología, se destaca por su conocimiento profundo y enfoque integral para diagnosticar y tratar afecciones respiratorias complejas. Su dedicación a la salud pulmonar de sus pacientes es evidente en la atención personalizada y efectiva que brinda en cada consulta. \n Este neumonólogo busca no solo aliviar los síntomas, sino también comprender las causas subyacentes de las afecciones respiratorias. A través de diagnósticos precisos y tratamientos adecuados, se esfuerza por mejorar la calidad de vida de cada paciente. Su compromiso con la educación continua y la investigación en el campo de la neumología lo posiciona como una autoridad en el tratamiento de enfermedades respiratorias, siendo una opción confiable para aquellos que buscan cuidado especializado para sus pulmones.",
+        "Contacto": "011-4657-2189"
       }
     ]
   }
